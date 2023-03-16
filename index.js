@@ -3,7 +3,6 @@ const fs =require('fs');
 const port = 7838;
 
 const server =http.createServer((req, res) => {
-// console.log(req.url);
 if(req.url==='/'){
 
 	fs.readFile('./index.html', (error, html)=>{
