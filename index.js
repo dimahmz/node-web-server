@@ -1,7 +1,6 @@
 const http = require("http");
 const fs = require("fs");
-const port = 7838;
-const addresses = require("./ip");
+const port = process.env.PORT;
 
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
@@ -40,4 +39,3 @@ const server = http.createServer((req, res) => {
 server.listen(port);
 
 console.log(`server is running on ${port} port`);
-console.log("ip addresses : " + addresses);
